@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Styling for the layout -->
+    <style>
+        /* Main container styling */
+        .container {
+            display: flex; /* Use flexbox for layout */
+            flex-direction: column; /* Arrange items in a column by default */
+            color: white; /* Text color for all elements */
+            height: 100vh; /* Full height of the viewport */
+            width: 100vw; /* Full width of the viewport */
+        }
+
+        /* Styling for the left box */
+        .left {
+            background-color: black; /* Background color for the left box */
+            padding: 10px; /* Padding around the content */
+            text-align: center; /* Center-align the text */
+        }
+
+        /* Styling for the middle container */
+        .middle {
+            display: flex; /* Use flexbox for the middle container */
+            flex-direction: column; /* Arrange items in a column by default */
+            flex: 1; /* Allow the middle container to grow and take available space */
+        }
+
+        /* Styling for the first middle box */
+        .middle1 {
+            background-color: seagreen; /* Background color for the first middle box */
+            padding: 20px; /* Padding around the content */
+            text-align: center; /* Center-align the text */
+        }
+
+        /* Styling for the second middle box */
+        .middle2 {
+            background-color: orange; /* Background color for the second middle box */
+            padding: 20px; /* Padding around the content */
+            text-align: center; /* Center-align the text */
+        }
+
+        /* Styling for the right box */
+        .right {
+            background-color: black; /* Background color for the right box */
+            padding: 20px; /* Padding around the content */
+            text-align: center; /* Center-align the text */
+        }
+
+        /* Media query for screens with a minimum width of 768px */
+        @media (min-width: 768px) {
+            .container {
+                flex-direction: row; /* Change to a row layout for larger screens */
+            }
+            .middle2, .middle1 {
+                flex: 1; /* Allow both middle boxes to take equal available space */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Main container with flexible layout -->
+    <div class="container">
+        <!-- Left box -->
+        <div class="left">BOX1</div>
+        
+        <!-- Middle container with two boxes -->
+        <div class="middle">
+            <div class="middle1">BOX2</div>
+            <div class="middle2">BOX3</div>
+        </div>
+        
+        <!-- Right box -->
+        <div class="right">BOX4</div>
+    </div>
+</body>
+</html>
